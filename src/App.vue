@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <Tweet />
+    <Tweet v-for='(tweets,index) in tweets' :key='tweets.timestamp' :message='tweets.message' :profileImage='tweets.user.image' :name='tweets.user.name' :timestamp='tweets.timestamp' :handle='tweets.user.handle'/>
   </div>
 </template>
 
